@@ -2,34 +2,195 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css" />
+  <!-- Enlace al archivo CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <title>Yerbatero</title>
 </head>
 
 <body>
-
   <header>
-    <div>
-      <p>Yerbatero</p>
-    </div>
-
-    <nav class="barra">
-      <ul>
-        <li><a href="../index.html">Nosotros</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="referencia.html">Referencias</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-sm bg-body-secondary border border-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand marcaR">
+          <i class="fa-solid fa-temperature-quarter iconoP"></i>
+          Yerbatero
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/referencia.html">Alianzas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col contacto">
+          <h2>¡Contáctanos!</h2>
+          <p>¿Tienes alguna pregunta, comentario o simplemente quieres compartir tu amor por la yerba mate con nosotros?
+            ¡Estamos aquí para escucharte! No dudes en ponerte en contacto con nuestro equipo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col contactoF">
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Roberto Alexander Carlos">
+            <label for="floatingInput">Nombre y Apellido</label>
+          </div>
+          <br>
+          <label for="provincia" class="form-label">¿Desde donde nos Escribis?</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccionar Provincia</option>
+            <option value="1">Chaco</option>
+            <option value="2">Corrientes</option>
+            <option value="3">Misiones</option>
+            <option value="1">Formosa</option>
+            <option value="2">Salta</option>
+            <option value="3">Jujuy</option>
+            <option value="1">Entre Rios</option>
+            <option value="2">Cordoba</option>
+            <option value="3">Santiago Del Estero</option>
+            <option value="1">Buenos Aires</option>
+            <option value="2">Catamarca</option>
+            <option value="3">La Rioja</option>
+          </select>
+          <br><br>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" placeholder="9 54 786 4765432">
+            <label for="floatingInput">Telefono</label>
+          </div>
+          <br>
+          <div class="form-floating mb-3">
+            <input type="" class="form-control" id="floatingInput" placeholder="San Bernandero 9812">
+            <label for="floatingInput">Dirección y Numero</label>
+          </div>
+          <br>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="asdasd@gmail.com">
+            <label for="floatingInput">Email</label>
+          </div>
+
+          <br>
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Recibir Boletín Informativo
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              No Recibir Boletín Informativo
+            </label>
+          </div>
+          <br><br>
+          <label for="customRange2" class="form-label">Del 1 al 10, ¿cuanto te gusto nuestra Pagina?</label>
+          <input type="range" class="form-range" min="0" max="10" id="customRange2">
+          <br><br><br>
+
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+              style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Dejanos tu inquietud...</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  </main>
+
+  <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="http://www.facebook.com/" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/?lang=es" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.google.com/" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="http://www.instagram.com/" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.linkedin.com/" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <!-- Github -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/" role="button"
+          data-mdb-ripple-color="dark" target="_blank"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      Yerbatero© 2024 Copyright -
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- End of .container -->
+
+  <!-- Enlace a los archivos JavaScript de Bootstrap 5 por separado, popper debe ir primero (popper.js y bootstrap.min.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!--  <main>
 
     <div class="contenedorContacto">
       <div class="imagenCostado"></div>
@@ -41,8 +202,10 @@
           <input class="areaC" id="nombre1" type="text" placeholder="Nombre y Apellido" required>
           <br> <br>
 
-          <label class="textoDato" for="nombre1">Provincia </label>
-          <!-- <input class="areaC" id="nombre1" type="text" placeholder="escribe tu nombre"> -->
+          <label class="textoDato" for="nombre1">Provincia </label> -->
+<!-- <input class="areaC" id="nombre1" type="text" placeholder="escribe tu nombre"> -->
+
+<!--
           <select class="areaC" name="Provincias" id="lang">
             <option value=" "> </option>
             <option value="Chaco">Chaco</option>
@@ -83,32 +246,4 @@
 
 
   </main>
-
-  <footer>
-
-    <a href="http://www.facebook.com/">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
-    <a href="http://www.linkedin.com/feed/">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="http:///www.whatsapp.com/?lang=es_LA">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <a href="http://www.instagram.com/">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="http://es.wikipedia.org/wiki/Tel%C3%A9fono">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-    <a href="http://es.wikipedia.org/">
-      <i class="fa-brands fa-wikipedia-w"></i>
-    </a>
-    <p>Todos los derechos son reservados por copyright.</p>
-  </footer>
-
-
-  
-</body>
-
-</html>
+ -->
