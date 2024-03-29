@@ -1,294 +1,107 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px;
 }
 
-header {
-  background-color: rgb(191, 219, 247);
-  height: 90px;
-  font-size: 20px;
-  padding-top: 45px;
-  padding-left: 20px;
-  padding-right: 10px;
+/* Aca comienza navBar */
+
+.marcaR {
+  pointer-events: none;
+  padding-left: 30px;
+  
 }
 
-header div p {
-  list-style: none;
-  display: inline-block;
-  color: black;
-
-  font-weight: bold;
+.iconoP {
+  margin-right: 10px;
 }
 
-.barra {
-  float: right;
+li {
+  transition: box-shadow 0.9s ease; /* Transición suave para el efecto */
 }
 
-.barra ul li {
-  list-style: none;
-  display: inline-block;
+li:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.2); /* Sombra cuando se pasa el mouse */
 }
 
-.barra a:hover {
-  color: aliceblue;
-}
+/* Aca comienza index.html */
 
-.barra a {
-  text-decoration: none;
-  color: black;
-}
-
-main {
-  /* height: calc(100vh - 90px); */
-  width: 100%;
-}
-
-.palabraArriba {
-  float: left;
-  width: 50%;
-  height: 550px;
-  text-align: center;
+.contTexto {
   background-color: rgb(225, 229, 242);
-  padding: 10px;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.textoArriba {
+  padding: 30px;
 }
 
 .conoceN {
   text-decoration: none;
   color: rgb(123, 115, 115);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 25px;
+  font-size: 20px;
+  
+  
 }
 
 .conoceN:hover {
   color: rgb(140, 140, 108);
-}
+  font-size: 20px;
+  text-shadow: 0 4px 8px;
+} 
 
-.imagenArriba {
-  float: right;
-  width: 50%;
-  height: 550px;
-  background-image: url(../resources/the-marias-1589669_1280.jpg);
+.imagenArriba{
+  background-image: url(../resources/mate-2465868_1280.jpg);
   background-position: center;
-}
+} 
 
-.texoEImagen2 {
-  width: 100%;
-  height: 100%;
-}
-
-.textoAbajo {
-  float: left;
-  width: 33%;
-  height: 427px;
-  padding: 20px;
-  background-color: rgb(31, 122, 140);
-}
-
-.textoAbajo2 {
-  float: right;
-  width: 33%;
-  height: 427px;
-  padding: 20px;
-  background-color: rgb(31, 122, 140);
-}
-
-.imagenAbajo {
-  float: left;
-  width: 34%;
-  height: 427px;
-  background-image: url(../resources/mate-2445221_1280.jpg);
-  background-position: center;
-}
-
-footer {
-  background-color: rgb(2, 43, 58);
-  /* margin-top: 130px; */
-  width: 100%;
+.textoAb, .textAbSeg{
+  background-color: rgb(225, 229, 242);
   text-align: center;
-
+  font-size: 2vw;
+  padding: 30px;
 }
 
-footer i {
-  font-size: 40px;
-  color: white;
-  padding: 20px;
-  text-align: center;
+.imgAb {
+    background-image: url(../resources/mate-2445221_1280.jpg);
+    background-position: center;
+  
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Aca Empieza el Css de Historia.Html */
 
-.imagenHistoria {
-  width: 100%;
-  height: 449px;
-  background-image: url(../resources/mate-2465868_1280.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.textoHistoria {
-  float: right;
-  width: 66%;
-  height: 450px;
-  padding: 20px;
-  background-color: rgb(31, 122, 140);
-  text-align: center;
-}
-
-.imagenHistoria1 {
-  width: 34%;
-  height: 450px;
-  background-image: url(../resources/yerba1.jpg);
-  background-position: center;
-}
-
-.tHistoria2 {
-  float: left;
-  width: 34%;
-  height: 300px;
-  padding: 20px;
-  background-color: rgb(31, 122, 140);
-  text-align: center;
-}
-
-.iHistoria2 {
-  width: 66%;
-  height: 299px;
-  background-image: url(../resources/yerba2.jpg);
-  background-position: center;
-  float: right;
-}
-
 /* Aca Empieza el Css de Galeria.Html */
-
-.contenedorImagenVideo {
-  display: flex;
-}
-
-.fotoPrimera {
-  width: 50%;
-  height: 500px;
-  background-image: url(../resources/yerba3.jpg);
-  background-position: left;
-  float: left;
-}
-
-.videoPrimero {
-  width: 50%;
-  height: 500px;
-  float: right;
-  background-color: rgb(191, 219, 247);
-}
-
-.fotoSegunda {
-  background-image: url(../resources/yerba4.jpg);
-  width: 100%;
-  height: 500px;
-  background-position: center;
-}
-
-.fotosYAudio {
-  display: flex;
-}
 
 /* Aca Empieza el Css de Referencia.Html */
 
-.contenedorPrimero {
-    display: flex;
-}
 
-.primeroFoto {
-    width: 50%;
-    height: 400px;
-    background-image: url(../resources/campo1.jpg);
-}
-
-.primerReferencia {
-    width: 50%;
-    height: 400px;
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(31, 122, 140) ;
-}
-
-.contenedorSegundo{
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.unicaFoto {
-    width: 34%;
-    height: 300px;
-    background-image: url(../resources/campo2.jpg);
-    
-}
-
-.segundaReferencia{
-    width: 33%;
-    height: 300px;
-    float: right;
-    text-align: center;
-    background-color: rgb(31, 122, 140);
-    padding: 20px;
-}
-
-.terceraReferencia{
-    width: 33%;
-    height: 300px;
-    float: left;
-    text-align: center;
-    background-color: rgb(31, 122, 140);
-    padding: 20px;
-}
-
-.ultimaImagen {
-    width: 100%;
-    height: 300px;
-    background-image: url(../resources/campo3.jpg);
-    background-position: center;
-}
 
 /* Aca Empieza el Css de Contacto.Html */
 
-.contenedorContacto {
-    display: flex;
-}
 
-.imagenCostado {
-    width: 30%;
-    height: 750px;
-    background-image: url(../resources/costado.jpg);
-    background-position: center;
-    float: left;
-    
-}
 
-.formularioContacto {
-    width: 40%;
-    padding: 20px;
-    border: solid black 2px;
-    text-align: center;
-    background-color: rgb(225, 229, 242);
-}
 
-.textoDato {
-    float: left;
-}
 
-.areaC {
-    float: right;
-}
 
-.botonEnviar {
-    font-size: 20px;
-}
 
-.imagenCostado2 {
-    width: 30%;
-    
-    background-image: url(../resources/costado1.jpg);
-    background-position: center;
-    float: right;
+
+
+
+
+
+/* Aca Empieza el Css del Footer  */
+
+
+
+.mb-4 {
+  padding-top: 25px;
 }
