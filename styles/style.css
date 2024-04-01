@@ -47,11 +47,13 @@ li:hover {
 }
 
 .textoAb,
+.textoAbA,
 .textAbSeg {
   background-color: rgb(225, 229, 242);
   text-align: center;
   font-size: 2vw;
   padding: 30px;
+  border-top: 1px solid white;
 }
 
 .imgAb {
@@ -59,17 +61,29 @@ li:hover {
   background-position: center;
 }
 
+.imagenArriba, .imgAb {
+  border: 1px solid white;
+}
+
+.contenedorNosotros {
+  margin: 0px !important;
+  padding: 30px;
+  background-color: rgb(225, 229, 242);
+  border-top: 1px solid white;
+}
+
 /* Aca Empieza el Css de Historia.Html */
 
-.fotoArribaH {
+/* .fotoArribaH {
   background-image: url(../resources/campo1.jpg);
   background-position: center;
   height: 50vw;
-}
+} */
 
 .fotoMedio {
   background-image: url(../resources/campo2.jpg);
   background-position: center;
+  border: 3px solid white;
 }
 
 .textoMedio,
@@ -79,13 +93,21 @@ li:hover {
   text-align: center;
   font-size: 2vw;
   padding: 30px;
-  border: 1px black;
+  
   border-style: solid;
+  border: 3px solid white;
 }
 
 .imgAbH {
   background-image: url(../resources/campo3.jpg);
   background-position: center;
+  border: 3px solid white;
+}
+
+.textoVia, .textoCamino, .textoPlanta {
+  text-shadow: 1px 1px 5px white;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 /* Aca Empieza el Css de Galeria.Html */
@@ -96,14 +118,15 @@ li:hover {
 }
 
 .videoA {
+  margin-top: 10px !important;
 }
 
 .fotoArrG {
-  text-shadow: 1px 2px 15px white;
+  text-shadow: 10px 5px 10px rgb(4, 4, 4);
   text-align: center;
-  color: rgb(17, 15, 15);
+  color: rgb(238, 236, 111);
   padding: 10px;
-  font-size: 0.8em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -141,6 +164,13 @@ li:hover {
   height: 50vw;
 }
 
+.fotoArrG,
+.fotoAbU,
+.fotoAbD,
+.fotoAbUU,
+.fotoAbTT {
+  border: 3px solid white;
+}
 /* Aca Empieza el Css de Referencia.Html */
 
 .nuestrasA,
@@ -152,23 +182,26 @@ li:hover {
   padding: 20px;
   font-size: 2vw;
   background-color: rgb(225, 229, 242);
+  border: 3px solid white;
 }
 
 .icoU {
   background-image: url(../resources/icono.jpeg);
   background-size: cover;
-  
+  border: 3px solid white;
 }
 
 .icoD {
   background-image: url(../resources/icono1.jpeg);
   background-size: cover;
+  border: 3px solid white;
 }
 
 .icoT {
   background-image: url(../resources/icono3.avif);
   background-size: cover;
   background-position: right;
+  border: 3px solid white;
 }
 
 /* Aca Empieza el Css de Contacto.Html */
@@ -182,9 +215,19 @@ li:hover {
 
 .contactoF {
   font-size: 1em;
-  
 }
 
+.botonUno {
+  margin: 2;
+}
+
+.botonDos {
+}
+
+.contenedorBotones {
+  margin: 30px;
+  padding: 20px;
+}
 
 /* Aca Empieza el Css del Footer  */
 
@@ -211,5 +254,4 @@ li:hover {
   .segundoR {
     order: 1;
   }
-
 }
