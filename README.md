@@ -1,3 +1,16 @@
+SEO Aplicado a Yerbateros
+
+Se utilizo la Etiqueta Meta, respecto a los Keywords, y descripción  en cada página.
+
+Se utilizo los títulos en cada página, haciendo referencia a su contenido principal, siendo este breve e informativo.
+
+Se utilizo los encabezados en orden respectivo (H1, H2, etc).
+
+Dentro de la carpeta del Sitio Web, esta todo organizado en sub carpetas, y en index.html, en la carpeta principal.
+
+Los textos están redactados de forma clara, y fácil de entender.
+![image](https://github.com/MarianoPuppo/CoderHouse-DesarrolloWeb/assets/94687691/30f0f1fb-a77d-4f31-9668-0871cebf95e7)
+
 # 💫 About Me:
 Actualmente me encuentre estudiando Programación Full Stack en CoderHouse, en Carrera Intensiva
 
