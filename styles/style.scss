@@ -1,0 +1,401 @@
+/* Variables */
+
+$colorFondoTextos: rgb(225, 229, 242);
+$formatoTextos: (
+  background-color: $colorFondoTextos,
+  text-align: center,
+  font-size: 2vw,
+  padding: 30px,
+  border-top: 1px solid white,
+);
+$formatoImagenes: (
+  background-position: center,
+  border: 1px solid white,
+);
+@mixin formatoImagenesGaleria {
+  background-position: center;
+  height: 50vw;
+  background-size: cover;
+}
+@mixin efectoImagenesScale {
+  &:hover {
+    transform: scale(1.2);
+  }
+  transition: all 0.3s ease;
+}
+@mixin efectoImagenesKeyFrame {
+  @keyframes efecto {
+    0% {
+      height: 50vw;
+    }
+    25% {
+      height: 100vw;
+    }
+    50% {
+      height: 150w;
+    }
+    75% {
+      height: 50vw;
+    }
+  }
+}
+@mixin efectoTituloPrincipal {
+  @keyframes aparecer {
+    0% {
+      opacity: 90%;
+    }
+    25% {
+      opacity: 50%;
+    }
+    50% {
+      opacity: 25%;
+    }
+    75% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}
+@mixin efectosValores($nombre) {
+  animation-name: $nombre;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Aca comienza navBar */
+.container-fluid {
+  .marcaR {
+    pointer-events: none;
+    padding-left: 30px;
+  }
+
+  .iconoP {
+    margin-right: 10px;
+  }
+
+  li {
+    transition: box-shadow 0.9s ease;
+
+    /* Transicionn suave para el efecto */
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+
+      /* Sombra cuando se pasa el mouse */
+    }
+  }
+}
+
+/* Todo el Documento */
+
+h1 {
+  @include efectoTituloPrincipal();
+  animation-name: aparecer;
+  animation-duration: 5s;
+  animation-direction: ease-in;
+  animation-iteration-count: infinite;
+}
+
+/* Aca comienza index.html */
+
+.container-fluid {
+  .imagenArriba {
+    background-image: url(../resources/mate-2465868_1280.jpg);
+    @each $propiedad, $valor in $formatoImagenes {
+      #{$propiedad}: $valor;
+    }
+  }
+
+  .textoAbA {
+    @each $propiedad, $valor in $formatoTextos {
+      #{$propiedad}: $valor;
+    }
+  }
+
+  .conoceN {
+    text-decoration: none;
+    color: rgb(123, 115, 115);
+    font-size: 20px;
+
+    &:hover {
+      color: rgb(140, 140, 108);
+      font-size: 20px;
+      text-shadow: 0 4px 8px;
+    }
+  }
+}
+
+.container-fluid {
+  .textoAb {
+    @each $propiedad, $valor in $formatoTextos {
+      #{$propiedad}: $valor;
+    }
+    h2 {
+      @include efectosValores(movimiento);
+      @keyframes movimiento {
+        0% {
+          width: 210px;
+        }
+        25% {
+          width: 250px;
+        }
+        50% {
+          width: 290px;
+        }
+        75% {
+          width: 330px;
+        }
+        100% {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  .textAbSeg {
+    @each $propiedad, $valor in $formatoTextos {
+      #{$propiedad}: $valor;
+    }
+  }
+
+  .imgAb {
+    background-image: url(../resources/mate-2445221_1280.jpg);
+    @each $propiedad, $valor in $formatoImagenes {
+      #{$propiedad}: $valor;
+    }
+  }
+}
+
+.contenedorNosotros {
+  margin: 0px !important;
+  padding: 30px;
+  background-color: $colorFondoTextos;
+  border-top: 1px solid white;
+}
+
+/* Aca Empieza el Css de Historia.Html */
+main {
+  .carousel {
+    &:hover {
+      transition: 2s ease;
+      filter: grayscale(100%);
+    }
+    .textoVia,
+    .textoCamino,
+    .textoPlanta {
+      text-shadow: 1px 1px 5px white;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+
+  .fotoMedio {
+    background-image: url(../resources/campo2.jpg);
+    @each $propiedad, $valor in $formatoImagenes {
+      #{$propiedad}: $valor;
+    }
+  }
+
+  .textoMedio,
+  .textoAbH,
+  .textAbSegH {
+    @each $propiedad, $valor in $formatoTextos {
+      #{$propiedad}: $valor;
+    }
+
+    h2 {
+      @include efectosValores(colores);
+      @keyframes colores {
+        0% {
+          color: rgb(106, 73, 73);
+        }
+        25% {
+          color: rgb(137, 72, 72);
+        }
+        50% {
+          color: rgb(175, 175, 88);
+        }
+        75% {
+          color: green;
+        }
+        100% {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .imgAbH {
+    background-image: url(../resources/campo3.jpg);
+    @each $propiedad, $valor in $formatoImagenes {
+      #{$propiedad}: $valor;
+    }
+  }
+}
+
+/* Aca Empieza el Css de Galeria.Html */
+
+.videoA {
+  margin-top: 10px !important;
+}
+
+.fotoArrG {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(25, 255, 56, 0.155),
+      rgba(255, 25, 25, 0.5)
+    ),
+    url(../resources/campo2.jpg);
+  @each $propiedad, $valor in $formatoImagenes {
+    #{$propiedad}: $valor;
+  }
+}
+
+.fotoArrG {
+  text-shadow: 10px 5px 10px rgb(4, 4, 4);
+  text-align: center;
+  color: rgb(238, 236, 111);
+  padding: 100px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.fotoAbU {
+  background-image: url(../resources/costado.jpg);
+  @include formatoImagenesGaleria;
+  @include efectoImagenesScale;
+}
+
+.fotoAbD {
+  background-image: url(../resources/costado1.jpg);
+  @include formatoImagenesGaleria;
+  @include efectoImagenesKeyFrame;
+
+  &:hover {
+    animation-name: efecto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+  }
+}
+
+.fotoAbT {
+  background-image: url(../resources/nueva1.jpg);
+  @include formatoImagenesGaleria;
+  @include efectoImagenesScale;
+}
+
+.fotoAbUU {
+  background-image: url(../resources/nueva.jpg);
+  @include formatoImagenesGaleria;
+  @include efectoImagenesScale;
+}
+
+.fotoAbTT {
+  background-image: url(../resources/nueva2.jpg);
+  @include formatoImagenesGaleria;
+  @include efectoImagenesKeyFrame;
+
+  &:hover {
+    animation-name: efecto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+  }
+}
+
+.fotoArrG,
+.fotoAbU,
+.fotoAbD,
+.fotoAbUU,
+.fotoAbTT {
+  border: 3px solid white;
+}
+
+/* Aca Empieza el Css de Referencia.Html */
+
+.nuestrasA,
+.confianzaC,
+.primerR,
+.segundoR,
+.tercerR {
+  @each $propiedad, $valor in $formatoTextos {
+    #{$propiedad}: $valor;
+  }
+}
+
+.icoU {
+  background-image: url(../resources/icono.jpg);
+  @each $propiedad, $valor in $formatoImagenes {
+    #{$propiedad}: $valor;
+  }
+}
+
+.icoD {
+  background-image: url(../resources/icono1.jpg);
+  @each $propiedad, $valor in $formatoImagenes {
+    #{$propiedad}: $valor;
+  }
+}
+
+.icoT {
+  background-image: url(../resources/icono3.jpg);
+  @each $propiedad, $valor in $formatoImagenes {
+    #{$propiedad}: $valor;
+  }
+  background-position: right;
+}
+
+/* Aca Empieza el Css de Contacto.Html */
+
+.contacto {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.contactoF {
+  font-size: 1em;
+}
+
+.botonUno {
+  margin: 2;
+}
+
+.contenedorBotones {
+  margin: 30px;
+  padding: 20px;
+}
+
+/* Aca Empieza el Css del Footer  */
+
+.mb-4 {
+  padding-top: 25px;
+}
+
+/* Aca empieza los Medias Queries */
+
+@media (max-width: 575.98px) {
+  .imgAbH,
+  .imgAb,
+  .icoU,
+  .icoD,
+  .icoT,
+  .imagenArriba {
+    height: 30vw;
+    background-position: center;
+  }
+
+  .icoD {
+    order: 2;
+  }
+
+  .segundoR {
+    order: 1;
+  }
+}

@@ -1,67 +1,111 @@
+/* Variables */
 /* Aca comienza navBar */
-
-.marcaR {
+.container-fluid .marcaR {
   pointer-events: none;
   padding-left: 30px;
 }
-
-.iconoP {
+.container-fluid .iconoP {
   margin-right: 10px;
 }
-
-li {
-  transition: box-shadow 0.9s ease; /* Transición suave para el efecto */
+.container-fluid li {
+  transition: box-shadow 0.9s ease;
+  /* Transicionn suave para el efecto */
+}
+.container-fluid li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+  /* Sombra cuando se pasa el mouse */
 }
 
-li:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra cuando se pasa el mouse */
+/* Todo el Documento */
+h1 {
+  animation-name: aparecer;
+  animation-duration: 5s;
+  animation-direction: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 90%;
+  }
+  25% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 25%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* Aca comienza index.html */
-
-.contTexto {
-  background-color: rgb(225, 229, 242);
-  text-align: center;
-  font-size: 2vw;
-}
-
-.textoArriba {
-  padding: 30px;
-}
-
-.conoceN {
-  text-decoration: none;
-  color: rgb(123, 115, 115);
-  font-size: 20px;
-}
-
-.conoceN:hover {
-  color: rgb(140, 140, 108);
-  font-size: 20px;
-  text-shadow: 0 4px 8px;
-}
-
-.imagenArriba {
+.container-fluid .imagenArriba {
   background-image: url(../resources/mate-2465868_1280.jpg);
   background-position: center;
+  border: 1px solid white;
 }
-
-.textoAb,
-.textoAbA,
-.textAbSeg {
+.container-fluid .textoAbA {
   background-color: rgb(225, 229, 242);
   text-align: center;
   font-size: 2vw;
   padding: 30px;
   border-top: 1px solid white;
 }
-
-.imgAb {
-  background-image: url(../resources/mate-2445221_1280.jpg);
-  background-position: center;
+.container-fluid .conoceN {
+  text-decoration: none;
+  color: rgb(123, 115, 115);
+  font-size: 20px;
+}
+.container-fluid .conoceN:hover {
+  color: rgb(140, 140, 108);
+  font-size: 20px;
+  text-shadow: 0 4px 8px;
 }
 
-.imagenArriba, .imgAb {
+.container-fluid .textoAb {
+  background-color: rgb(225, 229, 242);
+  text-align: center;
+  font-size: 2vw;
+  padding: 30px;
+  border-top: 1px solid white;
+}
+.container-fluid .textoAb h2 {
+  animation-name: movimiento;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes movimiento {
+  0% {
+    width: 210px;
+  }
+  25% {
+    width: 250px;
+  }
+  50% {
+    width: 290px;
+  }
+  75% {
+    width: 330px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+.container-fluid .textAbSeg {
+  background-color: rgb(225, 229, 242);
+  text-align: center;
+  font-size: 2vw;
+  padding: 30px;
+  border-top: 1px solid white;
+}
+.container-fluid .imgAb {
+  background-image: url(../resources/mate-2445221_1280.jpg);
+  background-position: center;
   border: 1px solid white;
 }
 
@@ -73,59 +117,79 @@ li:hover {
 }
 
 /* Aca Empieza el Css de Historia.Html */
-
-/* .fotoArribaH {
-  background-image: url(../resources/campo1.jpg);
-  background-position: center;
-  height: 50vw;
-} */
-
-.fotoMedio {
-  background-image: url(../resources/campo2.jpg);
-  background-position: center;
-  border: 3px solid white;
+main .carousel:hover {
+  transition: 2s ease;
+  filter: grayscale(100%);
 }
-
-.textoMedio,
-.textoAbH,
-.textAbSegH {
-  background-color: rgb(225, 229, 242);
-  text-align: center;
-  font-size: 2vw;
-  padding: 30px;
-  
-  border-style: solid;
-  border: 3px solid white;
-}
-
-.imgAbH {
-  background-image: url(../resources/campo3.jpg);
-  background-position: center;
-  border: 3px solid white;
-}
-
-.textoVia, .textoCamino, .textoPlanta {
+main .carousel .textoVia,
+main .carousel .textoCamino,
+main .carousel .textoPlanta {
   text-shadow: 1px 1px 5px white;
   font-weight: bold;
   font-size: 30px;
 }
-
-/* Aca Empieza el Css de Galeria.Html */
-
-.fotoArrG {
+main .fotoMedio {
   background-image: url(../resources/campo2.jpg);
   background-position: center;
+  border: 1px solid white;
+}
+main .textoMedio,
+main .textoAbH,
+main .textAbSegH {
+  background-color: rgb(225, 229, 242);
+  text-align: center;
+  font-size: 2vw;
+  padding: 30px;
+  border-top: 1px solid white;
+}
+main .textoMedio h2,
+main .textoAbH h2,
+main .textAbSegH h2 {
+  animation-name: colores;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes colores {
+  0% {
+    color: rgb(106, 73, 73);
+  }
+  25% {
+    color: rgb(137, 72, 72);
+  }
+  50% {
+    color: rgb(175, 175, 88);
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: black;
+  }
+}
+main .imgAbH {
+  background-image: url(../resources/campo3.jpg);
+  background-position: center;
+  border: 1px solid white;
 }
 
+/* Aca Empieza el Css de Galeria.Html */
 .videoA {
   margin-top: 10px !important;
+}
+
+.fotoArrG {
+  background-image: linear-gradient(to right bottom, rgba(25, 255, 56, 0.155), rgba(255, 25, 25, 0.5)), url(../resources/campo2.jpg);
+  background-position: center;
+  border: 1px solid white;
 }
 
 .fotoArrG {
   text-shadow: 10px 5px 10px rgb(4, 4, 4);
   text-align: center;
   color: rgb(238, 236, 111);
-  padding: 10px;
+  padding: 100px;
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -134,6 +198,11 @@ li:hover {
   background-image: url(../resources/costado.jpg);
   background-position: center;
   height: 50vw;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+.fotoAbU:hover {
+  transform: scale(1.2);
 }
 
 .fotoAbD {
@@ -142,26 +211,74 @@ li:hover {
   height: 50vw;
   background-size: cover;
 }
+@keyframes efecto {
+  0% {
+    height: 50vw;
+  }
+  25% {
+    height: 100vw;
+  }
+  50% {
+    height: 150w;
+  }
+  75% {
+    height: 50vw;
+  }
+}
+.fotoAbD:hover {
+  animation-name: efecto;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+}
 
 .fotoAbT {
-  background-image: url(../resources/nueva1.webp);
+  background-image: url(../resources/nueva1.jpg);
   background-position: center;
   height: 50vw;
   background-size: cover;
+  transition: all 0.3s ease;
+}
+.fotoAbT:hover {
+  transform: scale(1.2);
 }
 
 .fotoAbUU {
-  background-image: url(../resources/nueva.webp);
+  background-image: url(../resources/nueva.jpg);
+  background-position: center;
+  height: 50vw;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+.fotoAbUU:hover {
+  transform: scale(1.2);
+}
+
+.fotoAbTT {
+  background-image: url(../resources/nueva2.jpg);
   background-position: center;
   height: 50vw;
   background-size: cover;
 }
-
-.fotoAbTT {
-  background-image: url(../resources/nueva2.jpeg);
-  background-position: center;
-  background-size: cover;
-  height: 50vw;
+@keyframes efecto {
+  0% {
+    height: 50vw;
+  }
+  25% {
+    height: 100vw;
+  }
+  50% {
+    height: 150w;
+  }
+  75% {
+    height: 50vw;
+  }
+}
+.fotoAbTT:hover {
+  animation-name: efecto;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
 }
 
 .fotoArrG,
@@ -171,41 +288,40 @@ li:hover {
 .fotoAbTT {
   border: 3px solid white;
 }
-/* Aca Empieza el Css de Referencia.Html */
 
+/* Aca Empieza el Css de Referencia.Html */
 .nuestrasA,
 .confianzaC,
 .primerR,
 .segundoR,
 .tercerR {
-  text-align: center;
-  padding: 20px;
-  font-size: 2vw;
   background-color: rgb(225, 229, 242);
-  border: 3px solid white;
+  text-align: center;
+  font-size: 2vw;
+  padding: 30px;
+  border-top: 1px solid white;
 }
 
 .icoU {
-  background-image: url(../resources/icono.jpeg);
-  background-size: cover;
-  border: 3px solid white;
+  background-image: url(../resources/icono.jpg);
+  background-position: center;
+  border: 1px solid white;
 }
 
 .icoD {
-  background-image: url(../resources/icono1.jpeg);
-  background-size: cover;
-  border: 3px solid white;
+  background-image: url(../resources/icono1.jpg);
+  background-position: center;
+  border: 1px solid white;
 }
 
 .icoT {
-  background-image: url(../resources/icono3.avif);
-  background-size: cover;
+  background-image: url(../resources/icono3.jpg);
+  background-position: center;
+  border: 1px solid white;
   background-position: right;
-  border: 3px solid white;
 }
 
 /* Aca Empieza el Css de Contacto.Html */
-
 .contacto {
   text-align: center;
   padding: 10px;
@@ -221,37 +337,31 @@ li:hover {
   margin: 2;
 }
 
-.botonDos {
-}
-
 .contenedorBotones {
   margin: 30px;
   padding: 20px;
 }
 
 /* Aca Empieza el Css del Footer  */
-
 .mb-4 {
   padding-top: 25px;
 }
 
 /* Aca empieza los Medias Queries */
-
 @media (max-width: 575.98px) {
   .imgAbH,
   .imgAb,
   .icoU,
   .icoD,
-  .icoT {
+  .icoT,
+  .imagenArriba {
     height: 30vw;
     background-position: center;
   }
-
   .icoD {
     order: 2;
   }
-
   .segundoR {
     order: 1;
   }
-}
+}/*# sourceMappingURL=style.css.map */
